@@ -34,15 +34,11 @@ def error_handling() -> None:
     except WaterError as error:
         print(f"Caught WaterError: {error}\n")
     print("Testing catching all garden errors...")
-    for i in range(2):
+    for i in [0, 1]:
         try:
             raise_errors(i)
         except GardenError as error:
             print(f"Caught GardenError: {error}")
-#    try:
-#        raise GardenError()
-#    except GardenError as error:
-#        print(f"Caught GardenError: {error}")
 
 
 if __name__ == "__main__":

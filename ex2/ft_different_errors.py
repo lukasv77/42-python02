@@ -8,11 +8,11 @@ def garden_operations(operation_number: int) -> None:
     elif operation_number == 2:
         open("/non/existent/file")
     elif operation_number == 3:
-        'abc' + 123
+        'abc' + 123  # type: ignore[operator]
 
 
 def test_error_types() -> None:
-    for i in range(5):
+    for i in [0, 1, 2, 3, 4]:
         print(f'Testing operation {i}...')
         try:
             garden_operations(i)
